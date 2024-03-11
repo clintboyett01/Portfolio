@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+@import 'src/variables.scss';
+
+.text-container {
+  width: 100%;
+  background-color: transparent !important;
+  font-family: 'Inconsolata', monospace; 
+  white-space: nowrap; 
+  overflow-x: visible; 
+  text-align: center;
+
+  .text{
+    font-size: 64px;
+    color: $color-text;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: 64px; 
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 48px; 
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 32px; 
+    }
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px; 
+    }
+  }
+
+  .blinking-underscore-curser {
+    animation: blink 1s step-start infinite;
+    font-size: 64px;
+    color: $color-text;
+
+    @media (max-width: $breakpoint-xl) {
+      font-size: 64px; 
+    }
+    @media (max-width: $breakpoint-lg) {
+      font-size: 48px; 
+    }
+    @media (max-width: $breakpoint-md) {
+      font-size: 32px; 
+    }
+    @media (max-width: $breakpoint-sm) {
+      font-size: 24px; 
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

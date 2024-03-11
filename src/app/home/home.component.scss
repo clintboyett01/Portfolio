@@ -1,0 +1,98 @@
+@import 'src/variables.scss';
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 400px;
+}
+
+.parallax-hex {
+  min-height: 400px;
+  background-color: transparent!important;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+canvas#parallaxCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; 
+}
+
+
+
+.parallax-about {
+  background-image: url('/assets/parallax3.jpg');
+}
+
+@media only screen and (max-device-width: 1600px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+
+body {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+  body::-webkit-scrollbar {
+    display: none; 
+  }
+
+
+
+app-portfolio{
+  will-change: transform;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.centered-text {
+  white-space: nowrap; 
+  text-align: center; 
+  color: white; 
+}
+.centered-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; 
+}
+
+#particles-js {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background; 
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.centerConsole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}

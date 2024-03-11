@@ -1,0 +1,122 @@
+@import 'src/variables.scss';
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: appear 0.5s ease-out;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $color-background-raised;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  
+  @media only screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+    padding: 20px 10px;
+  }
+}
+
+.modal-background {
+  background-color: transparent;
+  overflow-y: auto;
+  
+  @media only screen and (max-width: $breakpoint-sm) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
+
+.modal-title {
+  font-family: $font-family-base;
+  font-size: $font-size-large;
+  color: $color-secondary;
+  line-height: $line-height-heading;
+  margin: $spacing-large 0;
+  text-align: center;
+  
+  @media only screen and (max-width: $breakpoint-sm) {
+    font-size: $font-size-base + 4px;
+  }
+}
+
+.modal-content {
+  font-family: $font-family-base;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-large;
+  margin-bottom: $spacing-large;
+  background-color: $color-background-raised;
+  width: 100%;
+  box-sizing: border-box;
+  
+  @media only screen and (max-width: $breakpoint-sm) {
+    gap: $spacing-base;
+    padding: 0 10px;
+  }
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 30vh;
+  object-fit: contain;
+  border-radius: $border-radius-base;
+  display: block;
+  margin: auto;
+  @media only screen and (max-width: $breakpoint-sm) {
+    max-height: 20vh;
+  }
+}
+
+p {
+  text-align: left;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  
+  @media only screen and (max-width: $breakpoint-sm) {
+    font-size: $font-size-base;
+  }
+}
+
+button {
+  background-color: $color-secondary;
+  color: $color-text;
+  padding: $spacing-small $spacing-base;
+  border: none;
+  border-radius: $border-radius-small;
+  transition: background-color $transition-base, box-shadow $transition-base;
+}
+
+button:hover {
+  box-shadow: 0 0 8px $color-text-hover;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  button {
+    margin: $spacing-small;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

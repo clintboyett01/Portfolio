@@ -1,0 +1,90 @@
+
+@import 'src/variables.scss';
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+body {
+  background-color: $color-background;
+  font-family: $font-family-base;
+  color: $color-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#portfolio {
+  padding: $spacing-large; 
+  background-color: $color-background;
+  box-shadow: $shadow-large; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio {
+  text-align: center;
+  margin-bottom: $spacing-large; 
+}
+
+.projects-container {
+  font-family: $font-family-base;
+  display: grid;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 64px;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+@media (max-width: 1500px) {
+  .projects-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projects-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .portfolio-title{
+    font-size: 48px !important;
+  }
+}
+
+.portfolio-title, .portfolio-description {
+  font-family: $font-family-base;
+  text-align: center;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.portfolio-title {
+  font-family: $font-family-base;
+  font-size: $font-size-xlarge;
+  line-height: $line-height-heading;
+  color: $color-secondary;
+}
+
+.portfolio-description {
+  font-family: $font-family-base;
+  font-size: $font-size-medium;
+  line-height: $line-height-base;
+  color: $color-text;
+}
+
+.container {
+  width: 100%; 
+  max-width: 1600px; 
+}

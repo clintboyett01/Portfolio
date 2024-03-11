@@ -1,0 +1,86 @@
+@import 'src/variables.scss';
+
+.skills-section {
+    text-align: center;
+    margin: $spacing-large 0;
+
+    .subtitle-text {
+        color: $color-secondary;
+        font-size: $font-size-xlarge; 
+        line-height: $line-height-heading;
+        font-family: $font-family-base;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $spacing-large;
+        margin: $spacing-large calc(10rem - $spacing-base);
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            margin: $spacing-large calc(5rem - $spacing-base);
+            gap: $spacing-large; 
+          }
+    }
+
+    .skill-card {
+        position: relative;
+        background-color: $color-background-raised;
+        color: $color-text;
+        border-radius: $border-radius-small;
+        width: $card-size;
+        min-width: $card-size;
+        height: $card-size;
+        box-shadow: 0 4px 8px rgba($color-primary, 0.4);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        will-change: transform, box-shadow;
+
+        &:hover {
+            transform: translateY(-$spacing-extra-small) scale(1.05);
+            box-shadow: 0 8px 16px rgba($color-secondary, 0.6);
+        }
+
+        svg {
+            width: 60px; 
+            height: auto;
+            margin-bottom: $spacing-small;
+        }
+
+        span {
+            font-size: $font-size-small;
+            display: block;
+            margin-top: $spacing-small;
+        }
+
+        @media only screen and (max-width: $breakpoint-lg) {
+            padding: $spacing-medium;
+
+            svg {
+                width: 55px; 
+            }
+
+            span {
+                font-size: 0.85rem; 
+            }
+        }
+
+        @media only screen and (max-width: $breakpoint-md) {
+            svg {
+                width: 50px; 
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+    .skills-section .skills-grid {
+        margin: $spacing-large;
+        gap: $spacing-large; 
+      }
+}

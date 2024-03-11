@@ -1,0 +1,98 @@
+@import 'src/variables.scss';
+
+$card-width:  var(--card-width);
+$card-margin:  var(--card-margin);
+$timeline-slider-margin: var(--timeline-slider-margin);
+$cards-visible-at-once: var(--cards-visible-at-once);
+$timeline-slider-width: var(--timeline-slider-width);
+
+
+.timeline {
+  position: relative;
+  overflow-x: hidden;
+  padding: 60px 0;
+  background-color: $color-background;
+  .timeline-progress {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 80%;
+    margin-top: 20px;
+    height: 6px;
+    background-color: $color-background-raised;
+    transform: translateX(-50%);
+  
+    .progress-bar {
+      width: 80%;
+      height: 100%;
+      background-color: $color-secondary;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+  
+
+  .timeline-slider-container {
+    width: $timeline-slider-width;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    margin-left: $timeline-slider-margin;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .timeline-slider {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
+    scroll-snap-align: start;
+    
+    padding-top: 10px;
+    app-milestone-card {
+      flex: 0 0 $card-width;
+      margin-right: 40px;
+      scroll-snap-align: center;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .timeline-navigation {
+    text-align: center;
+
+    button {
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      margin: 10px 25px;
+      border-radius: 50%;
+      background-color: $color-background;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      color: $color-text; 
+
+      &:hover {
+        
+        transform: scale(1.1); 
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      fa-icon {
+        font-size: 48px;
+        color:$color-secondary;
+        
+
+      }
+    }
+  }
+}

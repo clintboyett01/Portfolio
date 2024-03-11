@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\home",
+    "\\app\\simulation",
+    "\\assets",
+    "\\environments"
+  ],
+  "SelectedNode": "\\app\\simulation\\simulation.component.ts",
+  "PreviewInSolutionExplorer": false
+}

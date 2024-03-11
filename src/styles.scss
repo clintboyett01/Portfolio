@@ -1,0 +1,83 @@
+// styles.scss
+@import 'src/variables.scss';
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  background-color: $color-background;
+  color: $color-text;
+  overflow-y: scroll;
+}
+
+
+// Hide scrollbar for webkit browsers 3. Look for Opportunities to Refactor
+// Custom Scrollbar for WebKit browsers
+::-webkit-scrollbar {
+  width: 8px; // Adjust the width of the scrollbar
+  height: 8px; // Adjust the height of the scrollbar for horizontal scrolls
+}
+
+::-webkit-scrollbar-track {
+  background: $scrollbar-track-color; // Use the variable for consistency
+  border-radius: $border-radius-base; // Optional: rounded corners for the track
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-thumb-color; // Scrollbar thumb color
+  border-radius: $border-radius-base; // Optional: rounded corners for the thumb
+  border: 2px solid $scrollbar-track-color; // Optional: border around the thumb
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $scrollbar-thumb-hover-color; // Darker color on hover
+}
+
+
+// Reusable Button Styles
+.btn {
+  padding: $spacing-small $spacing-base;
+  font-size: $font-size-base;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &.btn-primary {
+    background-color: $color-primary;
+    color: $color-text;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-secondary;
+    color: $color-text;
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+// Responsive Design
+@media only screen and (max-width: $breakpoint-md) {
+  .responsive-text {
+    font-size: $font-size-small;
+  }
+}
+
+
+
+// IMPORTANT FOR MODAL POPUP ANIMATION AND CORNER RADIUS BACKGROUND
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  background-color: #ffffff00 !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  box-shadow: none !important; //var(--mdc-dialog-container-elevation, 0px 11px 15px -7px rgba(0, 0, 0, 0.2)), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}

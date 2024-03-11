@@ -1,0 +1,8 @@
+<div class="milestone-card" *ngIf="milestone.isVisible" (click)="toggleDetails()">
+  <div class="card-header">
+    <h3>{{ milestone.title }}</h3>
+  </div>
+  <div class="card-content">
+    <p>{{ milestone.description }}</p>
+  </div>
+</div>

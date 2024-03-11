@@ -1,0 +1,14 @@
+<div class="modal-background">
+  <div class="modal-container">
+    <h1 class="modal-title">{{ data.title }}</h1>
+    <div class="modal-content">
+      <img [src]="data.modalImageUrl" alt="{{ data.title }}" class="modal-image">
+      <p>{{ data.description }}</p>
+    </div>
+    <div class="modal-actions">
+      <button mat-button *ngIf="data.url" (click)="openUrl(data.url)">Demo</button>
+      <button mat-button *ngIf="data.urlToCode" (click)="openUrl(data.urlToCode)">Code</button>
+      <button mat-button (click)="dialogRef.close()">Close</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="timeline">
+    <div class="timeline-progress">
+      <div class="progress-bar" [style.width.%]="progressBar"></div>    </div>
+    <div class="timeline-slider-container">
+      <div class="timeline-slider" [style.transform]="'translateX(' + (-currentIndex * (cardWidth + cardMargin)) + 'px)'">
+        <app-milestone-card *ngFor="let milestone of milestones; let i = index" [milestone]="milestone" [ngClass]="{'active': i === currentIndex}" (click)="currentIndex = i-middleIndex"></app-milestone-card>
+      </div>
+    </div>
+    <div class="timeline-navigation">
+        <div class="timeline-navigation">
+            <button class="prev-button" (click)="prevMilestone()" [disabled]="currentIndex === 0">
+              <fa-icon [icon]="faChevronCircleLeft"></fa-icon> 
+            </button>
+            <button class="next-button" (click)="nextMilestone()" [disabled]="currentIndex === milestones.length - cardsVisibleAtOnce">
+              <fa-icon [icon]="faChevronCircleRight"></fa-icon>
+            </button>
+          </div>          
+      </div>      
+  </div>

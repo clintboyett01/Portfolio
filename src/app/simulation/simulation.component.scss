@@ -1,0 +1,51 @@
+$color-background: #f0f0f0;
+$color-secondary: #007bff;
+$color-background-raised: #ffffff;
+
+#unity-container {
+  background-color: $color-background;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+  canvas {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .performance-warning {
+    margin-top: 20px;
+    color: #ff0000;
+  }
+  
+  .download-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: $color-secondary;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: $color-background-raised;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: darken($color-background-raised, 10%);
+    }
+  }
+}

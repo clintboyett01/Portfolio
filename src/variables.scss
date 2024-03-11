@@ -1,0 +1,77 @@
+// Color Palette
+$color-primary: #f0f0f0;
+$color-secondary: hsl(199, 90%, 50%);
+$color-background: #0f0f0f;
+$color-background-raised: #262626;
+$color-text: #f0f0f0;
+$color-text-hover: #00AFFF;
+$color-accent: #f0f0f0;
+$color-accent-glow: hsl(0, 0%, 80%);
+$color-shadow: #f0f0f0;
+$color-shadow-hover: #00AFFF;
+
+// Typography
+$font-family-base: 'Montserrat', sans-serif;
+$font-size-base: 18px;
+$font-size-xlarge: 60px;
+$font-size-large: 42px;
+$font-size-medium: 28px;
+$font-size-small: 14px;
+$font-weight-bold: 700;
+$font-size-h1: 64px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+
+
+// Spacing
+$spacing-base: 16px;
+$spacing-large: 32px;
+$spacing-medium: 8px;
+$spacing-small: 8px;
+$spacing-extra-large: 64px;
+$spacing-extra-small: 4px;
+
+// Breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Shadows
+$shadow-base: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-large: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+// Animations
+$transition-base: .5s;
+$animation-duration-fast: 1s;
+$animation-duration-slow: 2s;
+
+// Border Radius
+$border-radius-small: 4px;
+$border-radius-base: 8px;
+$border-radius-large: 16px;
+
+// Z-Index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Scrollbar Colors
+$scrollbar-thumb-color: $color-background-raised;
+$scrollbar-track-color: $color-background;
+$scrollbar-thumb-hover-color: darken($color-primary, 10%);
+
+$card-size: 128px;
+$icon-size-base: 64px;
+
+
