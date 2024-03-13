@@ -1,6 +1,5 @@
-$color-background: #f0f0f0;
-$color-secondary: #007bff;
-$color-background-raised: #ffffff;
+
+@import 'src/variables.scss';
 
 #unity-container {
   background-color: $color-background;
@@ -19,6 +18,10 @@ $color-background-raised: #ffffff;
     color: #ff0000;
   }
   
+  .unity-desktop{
+    background-color: $color-background-raised;
+  }
+
   .download-link {
     display: inline-block;
     margin-top: 10px;

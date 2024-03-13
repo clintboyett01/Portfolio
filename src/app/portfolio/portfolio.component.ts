@@ -23,6 +23,6 @@ export class PortfolioComponent {
       
     });
   }
-  projects = projects;
+  projects = projects; 
   
 }

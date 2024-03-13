@@ -6,7 +6,7 @@
       <p>{{ data.description }}</p>
     </div>
     <div class="modal-actions">
-      <button mat-button *ngIf="data.url" (click)="openUrl(data.url)">Demo</button>
+      <button mat-button *ngIf="data.url" (click)="openUrl(data.url)">View</button>
       <button mat-button *ngIf="data.urlToCode" (click)="openUrl(data.urlToCode)">Code</button>
       <button mat-button (click)="dialogRef.close()">Close</button>
     </div>

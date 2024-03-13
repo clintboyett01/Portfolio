@@ -101,6 +101,7 @@
             ],
             "scripts": ["src/assets/simulation/Build/simulation.loader.js","node_modules/particles.js/particles.js"]
           }
+          
         }
       }
     }
